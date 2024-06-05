@@ -1,0 +1,379 @@
+/***************** dedicated hero ****************/
+.dd-hero {
+    padding: 270px 0;
+    background-color: $dd-primary-color;
+    .dd-hero-server {
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
+    }
+    .dd-hero-curve-shape {
+        width: 65%; 
+        height: 100%;
+        background-color: $dd-secondary-color;
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    }
+    @include screen-1700 {
+        padding: 250px 0 200px 0;
+        .dd-hero-server {
+            max-width: 50%;
+            bottom: 50%;
+            transform: translateY(50%);
+        }
+    }
+    @include screen-1400 {
+        padding: 200px 0;
+    }
+    @include large-screen {
+        padding: 120px 0 60px 0;
+        .dd-hero-server {
+            position: relative;
+            bottom: auto;
+            right: auto;
+            transform: translate(0);
+            max-width: 960px;
+            margin: 0 auto;
+            display: block;
+        }
+        .dd-hero-curve-shape {
+            display: none;
+        }
+    }
+    @include medium-screen {
+        .dd-hero-server {
+            max-width: 720px;
+        }
+    }
+    @include small-screen {
+        .dd-hero-content {
+            margin-bottom: 32px;
+        }
+        .dd-hero-server {
+            max-width: 540px;
+        }
+    }
+    @include portrait-phone {
+        .dd-hero-server {
+            max-width: calc(100% - 24px);
+        }
+    }
+}
+
+.dd-hero-content {
+    p {
+        color: $heading-color;
+        max-width: 560px;
+    }
+}
+
+.dd-section-bg {
+    background-color: $dd-section-bg;
+}
+
+.dd-pricing-single {
+    padding: 40px 45px;
+    .sale-badge {
+        background-color: $light-red;
+        padding: 4px 16px;
+        display: inline-block;
+        color: $white-color; 
+        border-radius: 50px 0 0 50px;
+        top: 14px;
+    }
+    .icon {
+        max-width: 85px;
+    }
+    .dd-price-amount {
+        sup {
+            font-size: 20px;
+            transform: translateY(-5px);
+            display: inline-block;
+        }
+        span {
+            font-size: 16px;
+            font-weight: 600;
+            color: $dd-text-color;
+        }
+    }
+    .feature-list {
+        li {
+            color: $dd-text-color;
+            font-size: 14px;
+            + li {
+                margin-top: 15px;
+            }
+        }
+    }
+    .template-btn {
+        border: 1px solid $dd-text-color;
+        color: $heading-color;
+        padding: 12px 56px;
+        font-size: 14px;
+        &:hover {
+            background-color: $light-red;
+            color: $white-color;
+            border-color: $light-red;
+        }
+    }
+    &.sale {
+        .template-btn {
+            background-color: $light-red;
+            color: $white-color;
+            border-color: $light-red;
+            &:hover {
+                background-color: transparent;
+                color: $light-red;
+                border-color: $light-red;
+            }
+        }
+    }
+}
+
+.dd-heading-color {
+    color: $heading-color;
+}
+
+.dd-primary-bg {
+    background-color: $dd-primary-color;
+}
+
+/********************* domain section start ************************/
+.dd-domain {
+    .triangle-shape {
+        width: 45%;
+        height: 100%;
+        background-color: $dd-secondary-color;
+        clip-path: polygon(100% 0, 0 100%, 100% 100%);
+        @include medium-screen {
+            display: none;
+        }
+    }
+    .server {
+        position: absolute;
+        right: 100px;
+        bottom: 30px;
+        @include screen-1400 {
+            max-width: 36%;
+        }
+        @include large-screen {
+            max-width: 30%;
+            right: 40px;
+            bottom: 80px;
+        }
+        @include medium-screen {
+            display: none;
+        }
+    }
+}
+.dd-search-form {
+    .icon {
+        color: $dd-text-color;
+    }
+    input {
+        width: 100%;
+        padding: 6px 0;
+        border: 0;
+        &::placeholder {
+            color: $dd-placeholder;
+        }
+    }
+    .dd-submit-btn {
+        flex-shrink: 0;
+        border: 0;
+        background-color: $light-red;
+        padding: 12px 30px;
+        color: $white-color;
+        border-radius: 50px;
+        font-weight: 500;
+        transition: $transition; 
+    }
+}
+
+.dd-domain-info {
+    .info-box {
+        box-shadow: none;
+        padding-left: 0;
+        padding-right: 40px;
+        h5 {
+            font-size: 24px;
+        }
+        span {
+            color: $heading-color;
+            font-size: 16px;
+        }
+    }
+}
+
+/******************* application section ******************/
+.dd-accordion {
+    .accordion-item {
+        + .accordion-item {
+            margin-top: 24px;
+        }
+    }
+    .accordion-header {
+        a {
+            font-size: 18px;
+            font-weight: 700;
+            color: $heading-color;
+            position: relative;
+            padding-left: 40px;
+            &::before {
+                content: '\f068';
+                font-family: 'FontAwesome';
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                background-color: $light-red;
+                border-radius: 50%;
+                color: $white-color;
+                font-size: 14px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                left: 0; 
+                top: -4px;
+            }
+            &.collapsed {
+                &::before {
+                    content: '\2b';
+                    background-color: $white-color;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    .accordion-body {
+        p {
+            color: $dd-text-color;
+        }
+    }
+}
+
+.dd-outline-btn {
+    padding: 12px 55px;
+    border: 1px solid $dd-text-color;
+    color: $heading-color;
+    font-weight: 600;
+    display: inline-block;
+    transition: $transition; 
+    &:hover {
+        background-color: $light-red;
+        border-color: $light-red;
+        color: $white-color;
+    }
+}
+
+/**************** feature section ****************/
+.dd-feature {
+    background-color: $dd-primary-light;
+}
+.dd-feature-card {
+    padding: 24px 24px 32px;
+    border-radius: 12px;
+    img{
+        max-width: 85px;
+    }
+}
+
+/***************** call to action *************/
+.dd-cta {
+    background-color: $dd-primary-light;
+}
+
+.dd-cta-box {
+    background-color: $dd-primary-color;
+    padding: 42px 56px;
+    position: relative;
+    z-index: 1;
+    &::before {
+        content: ''; 
+        position: absolute;
+        left: 0; 
+        top: 0; 
+        width: 36%;
+        height: 100%;
+        background-color: $dd-secondary-color;
+        z-index: -1;
+        clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    }
+    @include large-screen {
+        &::before {
+            display: none;
+        }
+    }
+}
+
+.dd-cta-content {
+    p {
+        color: $heading-color;
+    }
+}
+
+.dd-tels {
+    font-size: 22px;
+    font-weight: 700;
+    color: $heading-color;
+    span {
+        width: 52px;
+        height: 52px;
+        background-color: $light-red;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: $white-color;
+        font-size: 18px;
+    }
+    &:hover {
+        color: $heading-color;
+    }
+}
+
+.dd-icon-box {
+    border-radius: 12px;
+    padding: 40px 20px;
+    img{
+        max-width: 85px;
+    }
+}
+
+.dd-info-list { 
+    gap: 16px;
+    li {
+        width: calc(50% - 8px);
+    }
+    @include portrait-phone {
+        li {
+            width: 100%;
+        }
+    }
+}
+
+.dd-feedback-single {
+    .feedback-left {
+        background-color: rgba($dd-primary-color, 0.3);
+        padding: 30px 24px 24px;
+        border-radius: 8px;
+        overflow: hidden;
+        z-index: 1;
+        &::before {
+            content: ''; 
+            position: absolute;
+            left: 0; 
+            top: 0; 
+            width: 85%;
+            height: 125px;
+            background-color: $dd-secondary-color;
+            clip-path: polygon(0 0, 0% 100%, 100% 0);
+            z-index: -1;
+        }
+    }
+    @include portrait-phone {
+        flex-wrap: wrap;
+        .feedback-left {
+            width: 100%;
+        }
+    }
+}

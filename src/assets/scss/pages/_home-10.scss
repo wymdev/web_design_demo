@@ -1,0 +1,333 @@
+.container-1500 {
+    max-width: 1524px;
+    padding: 0 12px;
+    margin: 0 auto;
+}
+
+.hm10-hero-section {
+    padding: 150px 0 120px 0;
+    background-color: $dm10-primary-light;
+    border-radius: 0 0 50px 50px;
+    position: relative; 
+    z-index: 2;
+    @include small-screen {
+        padding: 100px 0;
+    }
+}
+
+.hm10-hero-search {
+    .label {
+        padding: 14px 32px;
+        color: $heading-color;
+        border-top: 3px solid $hs-primary-color;
+        background-color: $white-color;
+        font-weight: 500;
+        border-radius: 5px 5px 0 0;
+        display: inline-block;
+    }
+    .form-wrapper {
+        padding: 32px;
+        border-radius: 0 4px 4px 4px;
+        max-width: 600px;
+    }
+    form {
+        display: flex;
+        align-items: center;
+        input {
+            width: 100%;
+            padding: 16px 24px;
+            background-color: $h5-input-bg;
+            border: 0;
+            border-radius: 4px 0 0 4px;
+            &::placeholder {
+                color: $h5-placeholder;
+            }
+        }
+        .submit-btn {
+            background-color: $hs-primary-color;
+            color: $white-color; 
+            font-weight: 600;
+            flex-shrink: 0;
+            border: 0; 
+            padding: 16px 32px;
+            border-radius: 0 4px 4px 0;
+            transition: $transition; 
+            &:hover {
+                background-color: $heading-color;
+                color: $white-color;
+            }
+        }
+        @include screen-480 {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            .submit-btn {
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+/**************** pricing section *************/
+.hm10-pricing {
+    margin-top: -55px;
+    padding-top: 152px;
+    .vector-man {
+        left: 0; 
+        top: 0;
+        width: 24%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+    @include screen-1400 {
+        .vector-man {
+            display: none;
+        }
+    }
+}
+.hm10-pricing-wrapper {
+    max-width: 1170px;
+    @include screen-1400 {
+        margin: 0 auto;
+    }
+}
+
+.hm10-pricing-box {
+    padding: 24px;
+    background-color: $white-color;
+    border-radius: 10px;
+    gap: 40px;
+    .pricing-title {
+        background-color: rgba($hs-primary-color, 0.1);
+        padding: 24px;
+        border-radius: 10px;
+        span {
+            background-color: $white-color;
+            padding: 4px 16px;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 4px;
+            display: inline-block;
+            color: $heading-color;
+        }
+    }
+    .pricing-features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        max-width: 520px;
+        li {
+            font-size: 14px;
+            width: calc(50% - 5px);
+            i {
+                color: $success-text;
+            }
+        }
+    }
+    .pricing-amount {
+        padding-left: 40px;
+        border-left: 1px solid rgba($heading-color, 0.1);
+    }
+    &.pro {
+        .pricing-title {
+            background-color: $hs-primary-color;
+        }
+    }
+    @include screen-1440 {
+        .pricing-title {
+            min-width: 225px;
+        }
+        .pricing-amount {
+            min-width: 200px;
+        }
+    }
+    @include medium-screen {
+        flex-wrap: wrap;
+        .pricing-title {
+            width: 100%;
+        }
+        .pricing-amount {
+            width: 100%;
+            padding-left: 0;
+            border-left: 0;
+        }
+    }
+    @include screen-480 {
+        .pricing-features {
+            li {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+/************************** feature section *****************/
+.hm10-feature-card {
+    padding: 40px;
+}
+
+
+/****************** extra features ****************/
+.ex-feature-signup {
+    background-color: $dm10-secondary-color;
+    padding: 90px 40px;
+    border-bottom-right-radius: 40px;
+}
+.ex-signup-form {
+    input {
+        width: 100%;
+        padding: 16px 24px;
+        background-color: $white-color;
+        border: 0;
+        border-radius: 4px;
+    }
+    @include large-screen {
+        max-width: 500px;
+    }
+}
+
+.hm10-secondary-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border: 1px solid $black-bg;
+    border-radius: 4px;
+    font-weight: 700;
+    background-color: $white-color;
+    box-shadow: 0 4px $black-bg;
+    transition: $transition; 
+    color: $heading-color;
+    &:hover {
+        box-shadow: 4px 4px $black-bg;
+        color: $heading-color;
+    }
+}
+
+.hm10-primary-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border: 1px solid $black-bg;
+    border-radius: 4px;
+    font-weight: 700;
+    background-color: $hs-primary-color;
+    box-shadow: 0 4px $black-bg;
+    transition: $transition; 
+    color: $heading-color;
+    &:hover {
+        box-shadow: 4px 4px $black-bg;
+        color: $heading-color;
+    }
+}
+
+.ex-feature-card {
+    padding: 30px;
+    border: 1px solid rgba($dd-text-color, 0.2);
+    border-radius: 4px;
+    background-color: rgba($dd-text-color, 0.015)
+}
+
+
+
+/******************* about section ****************/
+.hm10-about-card {
+    border: 1px solid rgba($paragraph-color, 0.3);
+    border-radius: 6px;
+    max-width: 474px;
+    img {
+        max-width: 72px
+    }
+    @include medium-screen {
+        max-width: 100%;
+    }
+}
+
+/******************** feedback section start ***************/
+.hm10-feedback-wrapper {
+    max-width: 1320px;
+}
+.hm10-feedback-single {
+    background-color: $white-color; 
+    border-radius: 10px;
+    padding: 40px 24px;
+}
+
+/******************** support section start ****************/
+.hm10-support {
+    .bg-shape {
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 0 0 0 50px;
+        max-width: 390px;
+    }
+    @include screen-1700 {
+        .bg-shape {
+            display: none;
+        }
+    }
+}
+.ops-slider-controls {
+    button {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+        border-radius: 50%;
+        transition: $transition;
+        &.btn-prev {
+            border: 2px solid $deep-color;
+            color: $deep-color;
+            margin-right: 4px;
+            &:hover {
+                background-color: $hs-primary-color;
+                border-color: $hs-primary-color;
+                color: $heading-color;
+            }
+        }
+        &.btn-next {
+            border: 2px solid $hs-primary-color;
+            color: $heading-color;
+            background-color: $hs-primary-color;
+            &:hover {
+                background-color: transparent; 
+                border-color: $deep-color;
+                color: $deep-color;
+            }
+        }
+    }
+}
+
+.ops-slider-single {
+    padding: 16px 32px;
+    text-align: center;
+    border-radius: 4px;
+    height: 65px;
+}
+
+.hm10-counter-box {
+    display: inline-block;
+    padding: 40px;
+    border-radius: 4px;
+    h2 {
+        line-height: 0.8em;
+    }
+}
+
+/******************** faq section ****************/
+.hm10-tab-control {
+    li {
+        a {
+            display: inline-block;
+            padding: 24px;
+            min-width: 196px;
+            transition: $transition;
+            &.active {
+                box-shadow: $h4-box-shadow;
+            }
+        }
+    }
+}
+.hm10-faq-box {
+    padding: 40px;
+}

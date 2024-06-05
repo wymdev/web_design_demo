@@ -1,0 +1,297 @@
+.hs-hero-section {
+    padding: 180px 0 16px 0;
+    background-color: $dm10-primary-light;
+    .slice-image {
+        top: 160px;
+        left: 60px;
+        mix-blend-mode: color-burn;
+    }
+    .poll {
+        right: 42px; 
+        bottom: 80px;
+        mix-blend-mode: multiply;
+    }
+    @include small-screen {
+        padding: 120px 0;
+    }
+}
+.hs-hero-content {
+    p {
+        color: $heading-color;
+    }
+}
+.dark-outline-btn {
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
+    &:hover {
+        border-color: $primary-color; 
+        color: $white-color;
+        background-color: $primary-color;
+    }
+}
+
+.h9-domain-info {
+    .info-box {
+        span {
+            transform: translateY(2px);
+        }
+    }
+}
+
+.hs-outline-btn {
+    padding: 12px 56px;
+    border: 1px solid $dd-text-color;
+    color: $heading-color;
+    display: inline-block;
+    transition: $transition;
+    &:hover {
+        background-color: $hs-primary-color;
+        color: $heading-color;
+        border-color: $heading-color;
+    }
+}
+
+.hm9-pricing-card {
+    border: 1px solid $dd-text-color;
+    padding: 45px 40px;
+    border-radius: 15px;
+    background-color: $white-color;
+    &.pro-package {
+        border-color: transparent;
+        .hs-outline-btn {
+            background-color: $hs-primary-color;
+            color: $heading-color;
+            border-color: $heading-color;
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+    .pricing-wrapper {
+        position: relative;
+        z-index: 1;
+        margin-right: -69px;
+        padding-right: 65px;
+        margin-top: 45px;
+        h2 {
+            color: $secondary-color;
+            span {
+                color: $secondary-color;
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+        .pricing-badge {
+            top: -21px; 
+            right: 0;
+        }
+    }
+    .pricing-list {
+        li {
+            font-size: 15px;
+            i {
+                margin-right: 10px;
+                color: $hs-gray;
+            }
+            + li {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.hs-primary-btn {
+    background-color: $hs-primary-color;
+    color: $heading-color;
+    border: 1px solid $heading-color;
+    transition: $transition; 
+    &:hover {
+        background-color: transparent;
+    }
+}
+
+/**************feature section start ***************/
+.hm9-feature-card {
+    border: 1px solid $dd-text-color;
+    border-radius: 10px;
+    padding: 24px;
+    background-color: $white-color;
+    transition: $transition;
+    .icon-wrapper {
+        width: 60px;
+        height: 60px;
+        background-color: rgba($hs-primary-color, 0.3);
+        transition: $transition;
+    }
+    &:hover {
+        border-color: $white-color;
+        .icon-wrapper {
+            background-color: $hs-primary-color;
+        }
+    }
+}
+
+.hm9-apps-card {
+     border: 1px solid $dd-text-color;
+     padding: 40px 32px;
+     border-radius: 6px;
+     .link-btn {
+        color: $heading-color; 
+        transition: $transition;
+        &:hover {
+            color: $hs-primary-color;
+        }
+     }
+}
+
+.hm9-feedback-single {
+    padding: 40px 24px;
+    border: 1px solid $dd-text-color;
+    border-radius: 15px;
+    transition: $transition;
+    .quote-icon {
+        right: 24px;
+        top: 30px;
+    }
+    .client_thumb {
+        padding-left: 22px;
+        .cap-shape {
+            bottom: -30px;
+            left: 0;
+            path {
+                transition: $transition;
+            }
+        }
+    }
+    &:hover {
+        border-color: transparent;
+        box-shadow: $h4-box-shadow;
+        .client_thumb {
+            .cap-shape {
+                path {
+                    fill: $hs-primary-color;
+                    stroke: $heading-color;
+                }
+            }
+        }
+    }
+}
+
+/************** data center start ******************/
+.hm9-dt-single {
+    border: 1px solid $dd-text-color;
+    border-radius: 10px;
+    padding: 24px;
+    transition: $transition;
+    &:hover {
+        background-color: $white-color;
+        border-color: $white-color;
+    }
+    @include portrait-phone {
+        width: 100%;
+    }    
+}
+.data-center-map {
+    .data-center-pointer {
+        position: absolute;
+        &.btn-1 {
+            left: 31%;
+            bottom: 22%;
+        }
+        &.btn-2 {
+            left: 17%;
+            top: 26%;
+        }
+        &.btn-3 {
+            left: 36%;
+            top: 6%; 
+        }
+        &.btn-4 {
+            left: 53%;
+            bottom: 30%;
+        }
+        &.btn-5 {
+            right: 25%;
+            top: 20%;
+        }
+        &.btn-6 {
+            bottom: 18%;
+            right: 10%;
+        }
+    }
+}
+
+
+/****************** faq section start ***************/
+
+.hm9-faq-controls {
+    grid-column-gap: 24px;
+    grid-row-gap: 16px;
+    flex-wrap: nowrap;
+    li {
+        width: 25%;
+        button {
+            padding: 24px;
+            background-color: $white-color;
+            border: 1px solid $dd-text-color;
+            text-align: left;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 700;
+            color: $heading-color;
+            transition: $transition; 
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            flex-shrink: 0;
+            width: 100%;
+            span {
+                width: 40px; 
+                height: 40px;
+                background-color: rgba($hs-primary-color, 0.3);
+                transition: $transition;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                flex-shrink: 0;
+            }
+            &.active {
+                border-color: transparent;
+                span {
+                    background-color: $hs-primary-color;
+                }
+            }
+        }
+    }
+    @include large-screen {
+        flex-wrap: wrap;
+        li {
+            width: calc(33% - 13px);
+        }
+    }
+    @include medium-screen {
+        li {
+            width: calc(50% - 12px);
+        }
+    }
+    @include small-screen {
+        li {
+            width: 100%;
+        }
+    }
+}
+
+/********************** blog section start *******************/
+.hm9-blog-card {
+    background-color: $white-color;
+    h4 {
+        transition: $transition;
+        &:hover {
+            color: $hs-primary-color;
+        }
+    }
+}
+.hm9-blog-card-content {
+    padding: 40px 24px;
+}
